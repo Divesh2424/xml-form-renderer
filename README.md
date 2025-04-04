@@ -1,50 +1,52 @@
-# Welcome to your Expo app 👋
+# XML Form Renderer (React Native App)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a React Native mobile application that renders dynamic forms based on XML input. The app supports rendering from a predefined XML file and also accepts XML input from the user.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Two main buttons:
+  - **Render Form from XML File**
+  - **Render Form from Input XML**
+- Supports the following field types:
+  - Text field
+  - Date/Datetime field
+  - Radio buttons
+  - Drawing/Signature field
+- Handles invalid or malformed XML input gracefully with alerts.
 
-   ```bash
-   npm install
-   ```
+## Screens
 
-2. Start the app
+### 1. HomeScreen
+Displays two buttons for navigating to form rendering screens.
 
-   ```bash
-    npx expo start
-   ```
+### 2. FileXmlScreen
+Loads form structure from a hardcoded XML file and displays the form.
 
-In the output, you'll find options to open the app in a
+### 3. InputXmlScreen
+Allows users to paste custom XML input to generate a form dynamically.
+- Only the following field types are supported: **text**, **date/datetime**, **radio**, and **drawing**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Components
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### FormRenderer.js
+Dynamically renders form fields based on parsed XML data.
+- Uses `TextInput`, `DateTimePicker`, `Buttons`, and `SignatureCanvas`.
 
-## Get a fresh project
+### xmlParser.js
+Parses XML strings using `fast-xml-parser` and converts them to a structured JSON format usable by the renderer.
 
-When you're ready, run:
+## Error Handling
+- If XML is malformed or missing required structure, an error message is shown via an `Alert`.
+
+## Setup Instructions
 
 ```bash
-npm run reset-project
-```
+git clone https://github.com/yourusername/xml-form-renderer.git
+cd xml-form-renderer
+npm install
+npx expo start
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Requirements
+- Node.js
+- npm or yarn
+- Expo CLI
