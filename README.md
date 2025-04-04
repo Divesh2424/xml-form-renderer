@@ -50,3 +50,14 @@ npx expo start
 - Node.js
 - npm or yarn
 - Expo CLI
+
+## License
+
+This project is licensed under the MIT License.  
+© 2025 Divesh
+
+## Author
+
+- **Divesh** – [github-profile-link](https://github.com/Divesh2424)
+
+
