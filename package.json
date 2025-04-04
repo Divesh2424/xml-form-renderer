@@ -1,7 +1,10 @@
 {
   "name": "xml-form-renderer",
   "main": "expo-router/entry",
+  "description": "React Native app that renders dynamic forms from XML input.",
+  "author": "Divesh",
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
